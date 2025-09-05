@@ -1,0 +1,49 @@
+﻿@model UserDTO
+<li class="nav-item navbar-dropdown dropdown-user dropdown">
+    <a class="nav-link dropdown-toggle hide-arrow p-0" href="javascript:void(0);" data-bs-toggle="dropdown">
+        <div class="avatar avatar-online">
+            <img src="~/sneat/assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+        </div>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end">
+        <li>
+            <a class="dropdown-item" href="#">
+                <div class="d-flex">
+                    <div class="flex-shrink-0 me-3">
+                        <div class="avatar avatar-online">
+                            <img src="~/sneat/assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                        </div>
+                    </div>
+                    <div class="flex-grow-1">
+                        <h6 class="mb-0">@Model.FirstName @Model.LastName</h6>
+                        <small class="text-body-secondary">@Model.Role</small>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <div class="dropdown-divider my-1"></div>
+        </li>
+        <li>
+            <a class="dropdown-item" asp-area="Admin" asp-controller="User" asp-action="Profile" > <i class="icon-base bx bx-user icon-md me-3"></i><span>Profilim</span> </a>
+        </li>
+       
+        <li>
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="dropdown-item">
+                <span class="d-flex align-items-center align-middle">
+                    <i class="flex-shrink-0 icon-base bx bx-credit-card icon-md me-3"></i><span class="flex-grow-1 align-middle">Billing Plan</span>
+                    <span class="flex-shrink-0 badge rounded-pill bg-danger">4</span>
+                </span>
+            </a>
+        </li>
+        <li>
+            <div class="dropdown-divider my-1"></div>
+        </li>
+        <li>
+            <a class="dropdown-item" asp-area="Admin" asp-controller="Auth" asp-action="Logout">
+                <i class="icon-base bx bx-power-off icon-md me-3"></i>
+                <span>Çıkış Yap</span>
+            </a>
+        </li>
+    </ul>
+</li>
